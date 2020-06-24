@@ -52,11 +52,11 @@ namespace TesteSoftplan.Services.ApiTwo
             // Adding MediatR for Domain Events and Notifications
             services.AddMediatR(typeof(Startup));
 
-            // .NET Native DI Abstraction
-            services.AddDependencyInjectionConfiguration();
-
             services.Configure<JurosSet>(Configuration.GetSection("JurosSet"));
             services.Configure<Api>(Configuration.GetSection("Api"));
+
+            // .NET Native DI Abstraction
+            services.AddDependencyInjectionConfiguration(Configuration);
         }
 
         public static void Configure(IApplicationBuilder app, IWebHostEnvironment env)
