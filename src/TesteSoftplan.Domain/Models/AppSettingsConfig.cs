@@ -49,10 +49,20 @@ namespace TesteSoftplan.Domain.Models
     {
         public string Formula { get; set; }
         public string Tempo { get; set; }
+        /// <summary>
+        /// O padrão do tempo é sempre em mês. Mas caso seja necessário a variável de tempo pode ser modificada
+        /// para ano, dia, hora, minuto ou segundo sem necessidade de alterar o código (apenas no appsettings.json)
+        /// Dependendo do tipo de configuração existe um fator de ajuste que multiplica o tipo de tempo escolhido para
+        /// sempre adaptar para o padrão que é em mês. Caso não seja informada a variável ou esteja com "m"
+        /// o fator de multiplicação será 1 e não modifica o resultado.
+        /// </summary>
         public double TempoCalc
         {
             get
             {
+                if (string.IsNullOrEmpty(Tempo))
+                    return 1;
+
                 switch(Tempo.Trim().ToLower())
                 {
                     case "d":
