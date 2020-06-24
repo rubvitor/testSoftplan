@@ -37,6 +37,7 @@ namespace TesteSoftplan.Infra.CrossCutting.IoC
             // Infra - Data
             services.AddScoped<IEventStoreRepository, EventStoreRepository>();
             services.AddScoped<IJurosRepository, JurosRepository>();
+            services.AddScoped<ICodeRepository, CodeRepository>();
             services.AddHttpClient<IApiOneHttpClient, ApiOneHttpClient>();
 
             if (configuration != null)
