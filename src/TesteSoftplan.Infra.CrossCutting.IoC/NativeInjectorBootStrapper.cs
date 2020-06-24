@@ -12,12 +12,14 @@ using TesteSoftplan.Infra.Data.ApiExternal;
 using TesteSoftplan.Domain.Core.Events;
 using Equinox.Infra.Data.EventSourcing;
 using Equinox.Infra.Data.Repository.EventSourcing;
+using TesteSoftplan.Domain.Models;
+using Microsoft.Extensions.Configuration;
 
 namespace TesteSoftplan.Infra.CrossCutting.IoC
 {
     public static class NativeInjectorBootStrapper
     {
-        public static void RegisterServices(IServiceCollection services)
+        public static void RegisterServices(IServiceCollection services, IConfiguration configuration = null)
         {
             services.AddScoped<IEventStore, EventStore>();
 
@@ -36,6 +38,9 @@ namespace TesteSoftplan.Infra.CrossCutting.IoC
             services.AddScoped<IEventStoreRepository, EventStoreRepository>();
             services.AddScoped<IJurosRepository, JurosRepository>();
             services.AddHttpClient<IApiOneHttpClient, ApiOneHttpClient>();
+
+            if (configuration != null)
+                services.Configure<AppSettingsConfig>(configuration);
         }
     }
 }

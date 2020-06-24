@@ -55,7 +55,6 @@ namespace TesteSoftplan.Services.ApiTwo
             // .NET Native DI Abstraction
             services.AddDependencyInjectionConfiguration();
 
-            services.Configure<AppSettingsConfig>(Configuration);
             services.Configure<JurosSet>(Configuration.GetSection("JurosSet"));
             services.Configure<Api>(Configuration.GetSection("Api"));
         }

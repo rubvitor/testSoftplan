@@ -35,6 +35,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TesteSoftplan.Infra.CrossCu
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TesteSoftplan.Services.ApiOne", "src\TesteSoftplan.Services.ApiOne\TesteSoftplan.Services.ApiOne.csproj", "{7C23E364-C8F9-408B-BBAA-099814B68E45}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "6 - Test", "6 - Test", "{BA76B0A4-BFBD-4168-9D82-C9B81A996CBE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TesteSoftplan.Test", "src\TesteSoftplan.Test\TesteSoftplan.Test.csproj", "{DE0EA14A-96AA-44E4-AACC-EC5D3BEFF241}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -77,6 +81,10 @@ Global
 		{7C23E364-C8F9-408B-BBAA-099814B68E45}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7C23E364-C8F9-408B-BBAA-099814B68E45}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7C23E364-C8F9-408B-BBAA-099814B68E45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE0EA14A-96AA-44E4-AACC-EC5D3BEFF241}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE0EA14A-96AA-44E4-AACC-EC5D3BEFF241}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE0EA14A-96AA-44E4-AACC-EC5D3BEFF241}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE0EA14A-96AA-44E4-AACC-EC5D3BEFF241}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -93,6 +101,7 @@ Global
 		{2FBAA3BA-1BE2-45A3-AF2F-6732F21B7A29} = {554CAF06-5BF7-49E4-A507-002BAD928CEB}
 		{05728901-DAE2-48AB-91B4-E95CA51C754D} = {554CAF06-5BF7-49E4-A507-002BAD928CEB}
 		{7C23E364-C8F9-408B-BBAA-099814B68E45} = {13DB9370-D429-4613-8F67-561294A9FACA}
+		{DE0EA14A-96AA-44E4-AACC-EC5D3BEFF241} = {BA76B0A4-BFBD-4168-9D82-C9B81A996CBE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EA4494CB-C2E9-4618-9E01-F8073BC388C7}
