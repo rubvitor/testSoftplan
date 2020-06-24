@@ -49,22 +49,22 @@ namespace TesteSoftplan.Domain.Models
     {
         public string Formula { get; set; }
         public string Tempo { get; set; }
-        public int TempoCalc
+        public double TempoCalc
         {
             get
             {
                 switch(Tempo.Trim().ToLower())
                 {
                     case "d":
-                        return 30;
+                        return 1.0 / 30.0;
                     case "a":
                         return 12;
                     case "h":
-                        return 720;
+                        return 1.0 / 30.0 / 24.0;
                     case "mi":
-                        return 43200;
+                        return 1.0 / 30.0 / 24.0 / 60.0;
                     case "s":
-                        return 2592000;
+                        return 1.0 / 30.0 / 24.0 / 60.0 / 60.0;
                     default:
                         return 1;
                 }
