@@ -51,7 +51,7 @@ namespace TesteSoftplan.Services.ApiOne
 
             // Adding MediatR for Domain Events and Notifications
             services.AddMediatR(typeof(Startup));
-
+             
             // .NET Native DI Abstraction
             services.AddDependencyInjectionConfiguration(Configuration);
         }
