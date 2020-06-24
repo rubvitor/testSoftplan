@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TesteSoftplan.Application\TesteSoftplan.Application.csproj" />
+    <ProjectReference Include="..\TesteSoftplan.Domain\TesteSoftplan.Domain.csproj" />
+    <ProjectReference Include="..\TesteSoftplan.Infra.CrossCutting.Identity\TesteSoftplan.Infra.CrossCutting.Identity.csproj" />
+    <ProjectReference Include="..\TesteSoftplan.Infra.Data\TesteSoftplan.Infra.Data.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.1.4" />
+  </ItemGroup>
+
+</Project>
